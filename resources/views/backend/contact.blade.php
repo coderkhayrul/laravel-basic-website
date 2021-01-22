@@ -5,6 +5,7 @@
             <div class="card">
                 <div class="card-header">
                     <h1>Contact Us</h1>
+                    <a href="{{ route('index') }}" class="btn btn-primary"><i class="fas fa-undo"></i></a>
                 </div>
                 <div class="card-body">
                     <div class="row">
