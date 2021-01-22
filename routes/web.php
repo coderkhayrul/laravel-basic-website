@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//<- ------- HOME ROUTE --------- ->
+Route::resource('/', HomeController::class);
+
+//<- ------- ABOUT ROUTE --------- ->
+Route::resource('/about', AboutController::class);
+
+//<- ------- CONTACT ROUTE --------- ->
+Route::resource('/contact', ContactController::class);
