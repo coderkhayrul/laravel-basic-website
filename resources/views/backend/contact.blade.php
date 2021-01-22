@@ -20,7 +20,7 @@
                             </div>
                             <div class="form-group col-8 mt-2">
                                 <label class="form-check-label"> Phone Number</label>
-                                <input class="form-control" type="text" name="phogne" placeholder="Enter Number">
+                                <input class="form-control" type="phone" name="phone" placeholder="Enter Number">
                             </div>
                             <div class="form-group col-2 mt-2">
                                 <button class="form-control btn btn-success btn-md" type="submit">Save</button>
