@@ -3,9 +3,15 @@
     <div class="row justify-content-center mt-5">
         <div class="col-6">
             <div class="card">
-                <div class="card-header">
-                    <h1>Contact Us</h1>
-                    <a href="{{ route('index') }}" class="btn btn-primary"><i class="fas fa-undo"></i></a>
+                <div class="card-header bg-primary">
+                    <div class="row">
+                        <div class="col-10">
+                            <h4 class="text-light">Contact Us</h4>
+                        </div>
+                        <div class="col-2">
+                            <a href="{{ route('index') }}" class="btn btn-info text-light"><i class="fas fa-undo"></i></a>
+                        </div>
+                    </div>
                 </div>
                 <div class="card-body">
                     <div class="row">
