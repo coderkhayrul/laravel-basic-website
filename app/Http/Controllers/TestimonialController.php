@@ -2,29 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Contact;
-use Illuminate\Contracts\Foundation\Application;
-use Illuminate\Contracts\View\Factory;
-use Illuminate\Contracts\View\View;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
-class ContactController extends Controller
+class TestimonialController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return Application|Factory|View
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return  view('backend.contact');
+        //
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return void
+     * @return \Illuminate\Http\Response
      */
     public function create()
     {
@@ -34,25 +29,19 @@ class ContactController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param Request $request
-     * @return RedirectResponse
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        $contacts  = new Contact();
-        $contacts->name = $request->name;
-        $contacts->email = $request->email;
-        $contacts->phone = $request->phone;
-        $contacts->save();
-
-        return back();
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param int $id
-     * @return void
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
@@ -62,8 +51,8 @@ class ContactController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param int $id
-     * @return void
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
@@ -73,9 +62,9 @@ class ContactController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param Request $request
-     * @param int $id
-     * @return void
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
@@ -85,8 +74,8 @@ class ContactController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param int $id
-     * @return void
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
