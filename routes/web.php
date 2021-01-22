@@ -17,11 +17,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-        //<- ------- HOME ROUTE --------- ->
+//          <- ------- HOME ROUTE --------- ->
 Route::resource('/', HomeController::class);
 
-        //<- ------- ABOUT ROUTE --------- ->
-Route::resource('/about', AboutController::class);
-
-        //<- ------- CONTACT ROUTE --------- ->
+//          <- ------- CONTACT ROUTE --------- ->
 Route::resource('/contact', ContactController::class);

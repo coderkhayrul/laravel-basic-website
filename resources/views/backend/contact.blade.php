@@ -2,6 +2,9 @@
 @section('content')
     <div class="row justify-content-center mt-5">
         <div class="col-6">
+            @if(Session::has('success'))
+                <p class="alert alert-success"><i class="fas fa-check-circle"></i> {{ Session::get('success') }}</p>
+            @endif
             <div class="card">
                 <div class="card-header bg-primary">
                     <div class="row">

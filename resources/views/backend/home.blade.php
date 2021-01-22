@@ -22,17 +22,17 @@
                                <th scope="col">Name</th>
                                <th scope="col">Email</th>
                                <th scope="col">Phone</th>
-                               <th scope="col">Action </th>
                            </tr>
                            </thead>
                            <tbody>
-                           <tr>
-                               <th scope="row">1</th>
-                               <td>Mark</td>
-                               <td>Otto</td>
-                               <td>@mdo</td>
-                               <td><a href="#" class="btn btn-sm btn-danger"><i class="fas fa-minus-square"></i></a></td>
-                           </tr>
+                           @foreach($contacts as $contact)
+                               <tr>
+                                   <th scope="row">{{$contact->id}}</th>
+                                   <td>{{ $contact->name }}</td>
+                                   <td>{{ $contact->email }}</td>
+                                   <td>{{ $contact->phone }}</td>
+                               </tr>
+                           @endforeach
                            </tbody>
                        </table>
                    </div>

@@ -51,7 +51,7 @@ class ContactController extends Controller
         $contacts->email = $request->email;
         $contacts->phone = $request->phone;
         $contacts->save();
-
+        session()->flash('success', 'Contact Created Successfully!');
         return back();
     }
 
