@@ -19,15 +19,18 @@
                             @csrf
                             <div class="form-group col-8">
                                 <label class="form-check-label"> Name</label>
-                                <input class="form-control" type="text" name="name" placeholder="Enter Name">
+                                <input class="form-control @error('name') is-invalid @enderror" type="text" name="name" placeholder="Enter Name">
+                                @error('name') <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span> @enderror
                             </div>
                             <div class="form-group col-8">
                                 <label class="form-check-label mt-2"> Email</label>
-                                <input class="form-control" type="email" name="email" placeholder="Enter Name Email">
+                                <input class="form-control @error('email') is-invalid @enderror" type="email" name="email" placeholder="Enter Name Email">
+                                @error('email') <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span> @enderror
                             </div>
                             <div class="form-group col-8 mt-2">
                                 <label class="form-check-label"> Phone Number</label>
-                                <input class="form-control" type="phone" name="phone" placeholder="Enter Number">
+                                <input class="form-control @error('phone') is-invalid @enderror" type="phone" name="phone" placeholder="Enter Number">
+                                @error('phone') <span class="invalid-feedback"> <strong>{{ $message }}</strong></span> @enderror
                             </div>
                             <div class="form-group col-2 mt-2">
                                 <button class="form-control btn btn-success btn-md" type="submit">Save</button>

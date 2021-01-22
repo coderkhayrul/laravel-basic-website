@@ -8,6 +8,7 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Validation\ValidationException;
 
 class ContactController extends Controller
 {
@@ -36,9 +37,15 @@ class ContactController extends Controller
      *
      * @param Request $request
      * @return RedirectResponse
+     * @throws ValidationException
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+        'name' => "required",
+        'email' => "required",
+        'phone' => "required",
+    ]);
         $contacts  = new Contact();
         $contacts->name = $request->name;
         $contacts->email = $request->email;
